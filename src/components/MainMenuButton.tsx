@@ -1,12 +1,15 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MainMenuButton: React.FC<{
+  link: string;
   imageUrl: string;
   imageTextDescription: string;
-}> = ({ imageUrl, imageTextDescription }) => {
+}> = ({ link, imageUrl, imageTextDescription }) => {
   return (
-    <div className='w-[60%]'>
-      <img src={imageUrl} alt={imageTextDescription} />
+    <div className='w-[65%] md:w-[25%]'>
+      <Link to={link}>
+        <img src={imageUrl} alt={imageTextDescription} />
+      </Link>
     </div>
   );
 };

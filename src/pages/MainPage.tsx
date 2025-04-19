@@ -1,24 +1,33 @@
-import Section from '../components/section';
 import MainMenuButton from '../components/MainMenuButton';
+import Footer from '../components/Footer';
+
+import { mainMenuLinks } from '../assets/data/imagesData';
 
 const MainPage = () => {
   return (
-    <Section imageBackground='/images/background/main-bg-blue-mobile.jpg'>
-      <div className='flex flex-col md:flex-row items-center justify-center py-15'>
-        <MainMenuButton
-          imageUrl='/images/icon-experiencia.png'
-          imageTextDescription='Experiências sensoriais - Passeio sonoro'
-        />
-        <MainMenuButton
-          imageUrl='/images/icon-dunga.png'
-          imageTextDescription='Animação da artista Dunga Rodrigues'
-        />
-        <MainMenuButton
-          imageUrl='/images/icon-exposicao.png'
-          imageTextDescription='Exposição virtual'
-        />
+    <section
+      className='
+        bg-[url(/images/background/main-bg-blue-mobile.jpg)] 
+        md:bg-[url(/images/background/main-bg-blue.jpg)]
+      '
+    >
+      <div
+        className='
+          flex flex-col md:flex-row 
+          items-center justify-center align-middle
+          py-4 md:py-40
+        '
+      >
+        {mainMenuLinks.map((item) => (
+          <MainMenuButton
+            link={item.link}
+            imageUrl={item.imageUrl}
+            imageTextDescription={item.imageTextDescription}
+          />
+        ))}
       </div>
-    </Section>
+      <Footer />
+    </section>
   );
 };
 
