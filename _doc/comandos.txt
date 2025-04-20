@@ -87,3 +87,7 @@ git branch -m master main
   caminhos das imagens públicas:    
   image: '/unati/images/vocabulary/angola.jpg',
       
+-------------------------------------      
+  Template Literals  
+-------------------------------------       
+ console.log(`${greeting}, ${name}!`);
