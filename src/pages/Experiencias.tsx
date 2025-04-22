@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import { Link } from 'react-router-dom';
 
 import IconMap from '../components/IconMap';
@@ -11,7 +13,15 @@ import iconNoiva from '../assets/imgs/map/icon-noiva.png';
 import iconDunga from '../assets/imgs/map/icon-dunga.png';
 import iconIgreja from '../assets/imgs/map/icon-igreja.png';
 
+import IconMapButton from '../components/IconMapButton';
+
 const Experiencias = () => {
+  const [openPanel, setOpenPanel] = useState<boolean>(false);
+
+  function handleButtonClick(id: string) {
+    console.log(id);
+  }
+
   return (
     <section
       className='
@@ -25,31 +35,60 @@ const Experiencias = () => {
           <img className='w-20' src={iconVoltar} alt='voltar' />
         </Link>
       </div>
-      <div id='icons' className='grid grid-cols-5'>
-        <div className='mt-4 ml-10 w-20'>
-          <img src={iconCarroca} alt='' />
+      <div id='icons' className='grid grid-cols-6'>
+        <div className='mt-4 ml-10 w-18'>
+          <IconMapButton
+            iconName={iconCarroca}
+            alternativeText='Carroça'
+            onButtonClick={() => handleButtonClick('carroca')}
+          />
         </div>
         <div id='bruxa-dunga'>
-          <div className='mt-14 ml-6 w-18'>
-            <img src={iconBruxas} alt='voltar' />
+          <div className='mt-14 ml-8 w-16'>
+            <IconMapButton
+              iconName={iconBruxas}
+              alternativeText='Bruxas'
+              onButtonClick={() => handleButtonClick('bruxas')}
+            />
           </div>
-          <div className='mt-88 ml-6 w-18'>
+          <div className='mt-88 ml-6 w-16'>
             <img src={iconDunga} alt='Dunga Ropdrigues' />
+            <IconMapButton
+              iconName={iconDunga}
+              alternativeText='Dunga Rodrigues'
+              onButtonClick={() => handleButtonClick('bruxas')}
+            />
           </div>
         </div>
-        <div id='barao-noiva' className='mt-25'>
+        <div id='barao-noiva' className='mt-25 ml-8 w-16'>
           <div className='mt-4'>
-            <img src={iconBarao} alt='voltar' />
+            <IconMapButton
+              iconName={iconBarao}
+              alternativeText='Barão'
+              onButtonClick={() => handleButtonClick('barao')}
+            />
           </div>
           <div className='mt-1'>
-            <img src={iconNoiva} alt='voltar' />
+            <IconMapButton
+              iconName={iconNoiva}
+              alternativeText='Noiva'
+              onButtonClick={() => handleButtonClick('noiva')}
+            />
           </div>
         </div>
-        <div className='mt-4'>
-          <img src={iconPadre} alt='voltar' />
+        <div className='mt-14 w-18 ml-8'>
+          <IconMapButton
+            iconName={iconPadre}
+            alternativeText='padre'
+            onButtonClick={() => handleButtonClick('padre')}
+          />
         </div>
-        <div className='mt-4'>
-          <img src={iconIgreja} alt='voltar' />
+        <div className='mt-4 w-18 ml-5'>
+          <IconMapButton
+            iconName={iconIgreja}
+            alternativeText='igreja'
+            onButtonClick={() => handleButtonClick('igreja')}
+          />
         </div>
       </div>
     </section>
