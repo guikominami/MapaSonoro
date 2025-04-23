@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import iconVoltar from '../assets/imgs/icon-voltar.png';
-import iconCarroca from '../assets/imgs/map/icon-carroca.png';
-import iconBruxas from '../assets/imgs/map/icon-bruxas.png';
-import iconBarao from '../assets/imgs/map/icon-barao.png';
-import iconPadre from '../assets/imgs/map/icon-padre.png';
-import iconNoiva from '../assets/imgs/map/icon-noiva.png';
-import iconDunga from '../assets/imgs/map/icon-dunga.png';
-import iconIgreja from '../assets/imgs/map/icon-igreja.png';
+import iconCarroca from '../assets/imgs/map/icons/icon-carroca.png';
+import iconBruxas from '../assets/imgs/map/icons/icon-bruxas.png';
+import iconBarao from '../assets/imgs/map/icons/icon-barao.png';
+import iconPadre from '../assets/imgs/map/icons/icon-padre.png';
+import iconNoiva from '../assets/imgs/map/icons/icon-noiva.png';
+import iconDunga from '../assets/imgs/map/icons/icon-dunga.png';
+import iconIgreja from '../assets/imgs/map/icons/icon-igreja.png';
 
 import IconMapButton from '../components/IconMapButton';
 import MapPanel from '../components/MapPanel';

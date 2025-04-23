@@ -15,7 +15,7 @@ const MainPage = () => {
         className='
           flex flex-col md:flex-row 
           items-center justify-center align-middle
-          py-4 md:py-40
+          py-8 md:py-40 mb-4
         '
       >
         {mainMenuLinks.map((item) => (
