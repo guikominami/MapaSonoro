@@ -13,6 +13,7 @@ import iconIgreja from '../assets/imgs/map/icons/icon-igreja.png';
 
 import IconMapButton from '../components/IconMapButton';
 import MapPanel from '../components/MapPanel';
+import MapPanelDunga from '../components/MapPanelDunga';
 
 const Experiencias = () => {
   const [openPanel, setOpenPanel] = useState<boolean>(false);
