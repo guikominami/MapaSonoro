@@ -91,3 +91,13 @@ git branch -m master main
   Template Literals  
 -------------------------------------       
  console.log(`${greeting}, ${name}!`);
+ 
+-------------------------------------      
+  Parse html
+-------------------------------------   
+ import parse from 'html-react-parser';
+ 
+ -------------------------------------      
+  onClick event
+-------------------------------------   
+ React.MouseEvent<HTMLElement>
