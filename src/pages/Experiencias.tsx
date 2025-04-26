@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
@@ -12,21 +12,21 @@ import iconDunga from '../assets/imgs/map/icons/icon-dunga.png';
 import iconIgreja from '../assets/imgs/map/icons/icon-igreja.png';
 
 import IconMapButton from '../components/IconMapButton';
-import MapPanel from '../components/MapPanel';
-import MapPanelDunga from '../components/MapPanelDunga';
+import MapPanel from '../components/MapPanel/MapPanel';
+import MapPanelDunga from '../components/MapPanel/MapPanelDunga';
 
 const Experiencias = () => {
-  const [openPanel, setOpenPanel] = useState<boolean>(false);
+  const [openPanel, setOpenPanel] = useState<number>(0);
 
   const [idMapIcon, setIdMapIcon] = useState<string>('');
 
   function handleButtonClick(id: string) {
     setIdMapIcon(id);
-    setOpenPanel(true);
+    setOpenPanel(1);
   }
 
   function handleIconCloseClick() {
-    setOpenPanel(false);
+    setOpenPanel(0);
   }
 
   return (
@@ -37,8 +37,12 @@ const Experiencias = () => {
         bg-cover bg-no-repeat h-[690px]
       '
     >
-      {openPanel && (
+      {openPanel === 1 && (
         <MapPanel iconId={idMapIcon} onCloseIconClick={handleIconCloseClick} />
+      )}
+
+      {openPanel === 2 && (
+        <MapPanelDunga onCloseIconClick={handleIconCloseClick} />
       )}
 
       <div className='pt-2 pl-2'>
@@ -58,7 +62,7 @@ const Experiencias = () => {
             position='mt-10 ml-10 w-16'
             iconName={iconBruxas}
             alternativeText='Bruxas'
-            onButtonClick={() => handleButtonClick('bruxas')}
+            onButtonClick={() => handleButtonClick('bruxa')}
           />
           <IconMapButton
             position='mt-24 ml-8 w-16'
@@ -90,7 +94,7 @@ const Experiencias = () => {
             position='col-3 mt-66 w-16'
             iconName={iconDunga}
             alternativeText='Dunga Rodrigues'
-            onButtonClick={() => handleButtonClick('bruxas')}
+            onButtonClick={() => handleButtonClick('dunga')}
           />
         </div>
       </div>
