@@ -5,8 +5,9 @@ import { mapMapExplanationData } from '../../assets/data/mapData';
 import MapPanelSection from './MapPanelSection';
 
 import Paragraph from '../Paragraph';
+import MapPanelTitle from './MapPanelTitle';
 
-const MapPanelFichaTecnica: React.FC<{
+const MapPanelExplanation: React.FC<{
   iconId: string;
   onCloseIconClick: () => void;
 }> = ({ iconId, onCloseIconClick }) => {
@@ -14,10 +15,10 @@ const MapPanelFichaTecnica: React.FC<{
 
   return (
     <MapPanelSection onCloseIconClick={onCloseIconClick}>
-      <Paragraph>{parse(mapData.introduction)}</Paragraph>
+      <MapPanelTitle title={mapData.title} />
       <Paragraph>{parse(mapData.text)}</Paragraph>
     </MapPanelSection>
   );
 };
 
-export default MapPanelFichaTecnica;
+export default MapPanelExplanation;

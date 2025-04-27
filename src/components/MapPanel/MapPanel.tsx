@@ -15,18 +15,10 @@ const MapPanel: React.FC<{
 }> = ({ iconId, onCloseIconClick }) => {
   const mapData = mapImageData[iconId];
 
-  function handleSoundIconClick() {
-    const audio = new Audio(mapData.audioUrl);
-    audio.play();
-  }
-
   return (
     <MapPanelSection onCloseIconClick={onCloseIconClick}>
       <MapPanelTitle title={mapData.title} />
-      <MapPanelSubtitle
-        subtitle={mapData.subtitle}
-        onSoundIconClick={handleSoundIconClick}
-      />
+      <MapPanelSubtitle subtitle={mapData.subtitle} audio={mapData.audioUrl} />
       <Paragraph>
         <b>Texto: </b> {mapData.author}
       </Paragraph>

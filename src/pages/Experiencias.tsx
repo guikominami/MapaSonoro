@@ -18,6 +18,7 @@ import IconMapButtonBuildings from '../components/IconMapButtonBuildings';
 import MapPanel from '../components/MapPanel/MapPanel';
 import MapPanelDunga from '../components/MapPanel/MapPanelDunga';
 import MapPanelBuilding from '../components/MapPanel/MapPanelBuilding';
+import MapPanelExplanation from '../components/MapPanel/MapPanelExplanation';
 
 const Experiencias = () => {
   const [openPanel, setOpenPanel] = useState<number>(0);
@@ -51,6 +52,13 @@ const Experiencias = () => {
 
       {openPanel === 3 && (
         <MapPanelBuilding
+          iconId={idMapIcon}
+          onCloseIconClick={handleIconCloseClick}
+        />
+      )}
+
+      {openPanel === 4 && (
+        <MapPanelExplanation
           iconId={idMapIcon}
           onCloseIconClick={handleIconCloseClick}
         />
@@ -140,13 +148,13 @@ const Experiencias = () => {
           position='w-10 absolute top-154 right-13'
           iconName={iconDuvida}
           alternativeText='Dúvidas'
-          onButtonClick={() => handleButtonClick('duvida', 1)}
+          onButtonClick={() => handleButtonClick('doubts', 4)}
         />
         <IconMapButton
           position='w-10 absolute top-154 right-4'
           iconName={iconFicha}
           alternativeText='Ficha técnica'
-          onButtonClick={() => handleButtonClick('ficha', 1)}
+          onButtonClick={() => handleButtonClick('team', 4)}
         />
       </div>
     </section>

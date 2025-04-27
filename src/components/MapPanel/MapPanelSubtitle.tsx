@@ -1,20 +1,15 @@
-import React from 'react';
+import ReactAudioPlayer from 'react-audio-player';
 import parse from 'html-react-parser';
-import iconSound from '../../assets/icon/iconSound.png';
 
 const MapPanelSubtitle: React.FC<{
   subtitle: string;
-  onSoundIconClick: () => void;
-}> = ({ subtitle, onSoundIconClick }) => {
+
+  audio: string;
+}> = ({ subtitle, audio }) => {
   return (
-    <div className='flex flex-row items-start justify-between'>
-      <h2 className='text-sm mb-2'>{parse(subtitle)}</h2>
-      <img
-        src={iconSound}
-        alt='ícone de auto falante para tocar o som'
-        onClick={onSoundIconClick}
-        className='w-8'
-      />
+    <div className='mt-1 mb-4'>
+      <h2 className='text-sm mb-4'>{parse(subtitle)}</h2>
+      <ReactAudioPlayer src={audio} controls />
     </div>
   );
 };

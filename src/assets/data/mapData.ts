@@ -44,7 +44,7 @@ interface MapBuildingText {
 }
 
 interface MapExplanationText {
-  introduction: string;
+  title: string;
   text: string;
 }
 
@@ -318,9 +318,12 @@ export const mapBuildingData: MapBuilding = {
 
 export const mapMapExplanationData: MapExplanation = {
   doubts: {
-    introduction:
-      'Bem vind_ ao Passeio Sonoro! Neste passeio, deixe-se transportar para as ruelas do Centro Histórico, através das lendas urbanas, narradas e contadas pelos atores do Grupo Tibanaré. Siga o mapa interativo para descobrir e vivenciar a s histórias que passeiam até hoje por Cuiabá. A experiência é mais completa utilizando fones de ouvido. Aproveite!',
+    title: '',
     text:
+      'Bem vind_ ao Passeio Sonoro! Neste passeio, deixe-se transportar para as ruelas do Centro Histórico, através das lendas urbanas, narradas e contadas pelos atores do Grupo Tibanaré. Siga o mapa interativo para descobrir e vivenciar a s histórias que passeiam até hoje por Cuiabá. A experiência é mais completa utilizando fones de ouvido. Aproveite!' +
+      '<br><br>' +
+      "<img src='/images/map/separador.png' style='width: 80%;margin-left: 10%;'>" +
+      '<br>' +
       'Esta experiência foi pensada em meados de 2015, após o Grupo Tibanaré realizar a primeira temporada do espetáculo Passeio Noturno, no centro histórico de Cuiabá, inspirado no livro “Cuiabá - Roteiro das Lendas”, escrito por Dunga Rodrigues. Os espectadores desejavam descobrir mais sobre o universo do espetáculo, então surge a ideia do Passeio Sonoro, que em 2022 se concretiza através da Lei Aldir Blanc - com uma homenagem do Grupo Tibanaré à memória e ao legado de Dunga Rodrigues (Edital Conexão Mestres da Cultura - Secretaria de Cultura, Esporte e Lazer de Mato Grosso).' +
       '<br><br>' +
       'Além de vivenciar os seis episódios que estão disponíveis neste aplicativo, convidamos você para visitar e conhecer a extraordinária artista Dunga Rodrigues, na exposição virtual “Emplumo as asas e me solto pelo infinito – Dunga Rodrigues”: biografia, fotografias inéditas, partituras, músicas e outras obras desta artista que marcou a história da arte em Mato Grosso.' +
@@ -328,19 +331,20 @@ export const mapMapExplanationData: MapExplanation = {
       'E acompanhe a gente pelas redes sociais: @grupotibanare',
   },
   team: {
-    introduction: 'Ficha técnica - Passeio Sonoro',
+    title: 'Ficha técnica - Passeio Sonoro',
     text:
-      'Idealização: Fernanda Gandes, Jefferson Jarcem e Naine Terena ' +
-      'Elenco: Bruno Botelho, Juliana Graziela, Keilla Borges, Rogério Santana, Valter Lara e Vini Hoffman ' +
-      'Direção: Jefferson Jarcem ' +
-      'Adaptação do roteiro: Daniel Arcades ' +
-      'Preparação de elenco: Felipe Lima' +
-      'Captação de áudio: Moby Dick Produções' +
-      'Desenho de som: Pedro Caetano' +
-      'Ilustrações: Heryck Gaby' +
-      'Desenvolvedores do aplicativo: Tecnoon Tecnologia & Inovação.' +
-      'Produção executiva: Fernanda Gandes' +
-      'Assistente de produção: Cacau Borges' +
-      'Organização administrativa: Karine Mattos Fotos: Conservatório Dunga Rodrigues',
+      '<b>Idealização: </b>Fernanda Gandes, Jefferson Jarcem e Naine Terena <br><br>' +
+      '<b>Elenco: </b>Bruno Botelho, Juliana Graziela, Keilla Borges, Rogério Santana, Valter Lara e Vini Hoffman<br><br>' +
+      '<b>Direção: </b>Jefferson Jarcem<br><br>' +
+      '<b>Adaptação do roteiro: </b>Daniel Arcades<br><br>' +
+      '<b>Preparação de elenco: </b>Felipe Lima<br><br>' +
+      '<b>Captação de áudio: </b>Moby Dick Produções<br><br>' +
+      '<b>Desenho de som: </b>Pedro Caetano<br><br>' +
+      '<b>Ilustrações: </b>Heryck Gaby<br><br>' +
+      '<b>Desenvolvedores do aplicativo: </b>Tecnoon Tecnologia & Inovação.<br><br>' +
+      '<b>Desenvolvedor do website: </b>Guilherme Kominami<br><br>' +
+      '<b>Produção executiva: </b>Fernanda Gandes<br><br>' +
+      '<b>Assistente de produção: </b>Cacau Borges<br><br>' +
+      '<b>Organização administrativa: </b>Karine Mattos Fotos: Conservatório Dunga Rodrigues<br>',
   },
 };
