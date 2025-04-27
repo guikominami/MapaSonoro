@@ -12,17 +12,19 @@ import imgPadre from '../imgs/map/tales/mapa-conto-padre.jpg';
 import imgIgreja from '../imgs/map/tales/mapa-conto-igreja.jpg';
 
 import imgNoiva from '../imgs/map/tales/mapa-conto-noiva.jpg';
-export interface MapIcon {
-  [key: string]: MapText;
+interface MapIcon {
+  [key: string]: MapTaleText;
 }
 
-// export interface MapIcon {
-//   carroca: MapText;
-//   noiva: MapText;
-// }
+interface MapBuilding {
+  [key: string]: MapBuildingText;
+}
 
-interface MapText {
-  id: string;
+interface MapExplanation {
+  [key: string]: MapExplanationText;
+}
+
+interface MapTaleText {
   title: string;
   subtitle: string;
   audioUrl: string;
@@ -34,9 +36,20 @@ interface MapText {
   tale: string;
 }
 
+interface MapBuildingText {
+  title: string;
+  local: string;
+  localUrl: string;
+  description: string;
+}
+
+interface MapExplanationText {
+  introduction: string;
+  text: string;
+}
+
 export const mapImageData: MapIcon = {
   carroca: {
-    id: 'carroca',
     title: 'CARROÇA MAL ASSOMBRADA',
     subtitle: '<b>CONTO - CARROÇA MAL ASSOMBRADA</b>, narrado por Valter Lara',
     audioUrl: carroca,
@@ -91,7 +104,6 @@ export const mapImageData: MapIcon = {
       '- O Cai-cai, não. Eu não posso ir pra lá. Eu vou me curar. Minha família é de gente forte.',
   },
   noiva: {
-    id: 'noiva',
     title: 'NOIVA DE BRANCO',
     subtitle: '<b>CONTO – NOIVA DE BRANCO</b>, narrado por Vini Hoffmann',
     audioUrl: noiva,
@@ -117,7 +129,6 @@ export const mapImageData: MapIcon = {
       'Nem venha me assaltar que eu não tenho nada. Só trouxe meu cigarro. (barulho de vento forte e passos. Barulho de chave pegando para abrir a porta.) (voz de uma mulher) - Quis fazer peraltagem né seu Chico? Uaiiiiiii! Valei meu Cristo do nosso Senhor Bom Jesus! Socorro! (barulho de porta fechada) Meu amor, tinha uma noiva fantasma gigante na porta de casa. Era do tamanho da árvore da praça. Meu Deus, ela tava vestida de véu e grinalda... ai, meu deus, não eu nem vi a cara, eu acho. Ô, minhas filhas, venham cá. Meu deus do céu. Eu tô me tremendo todo. (...) Calma, o quê, gente. Tinha um fantasma gigante na porta de nossa casa. FANTASMA! O quê? Não, não, podem dormir de luz acesa! Sério! E ninguém mais sai de noite nesta casa.',
   },
   barao: {
-    id: 'barao',
     title: 'PROCISSÃO DAS ALMAS',
     subtitle:
       '<b>CONTO – PROCISSÃO DAS ALMAS</b>, narrado por Juliana Graziela',
@@ -142,7 +153,6 @@ export const mapImageData: MapIcon = {
       'Acho que tava seguindo lá pra São Francisco. Tô acabada! E essa vela ainda na minha mão? Ai, deus do céu! Vai dormir debaixo do travesseiro e amanhã eu derreto ela todinha. Antes a garoto na rua que aquele bando de velha. (som de sono. Dia amanhece. Narradora acordando) Hum. mãe? Mãe, tá aí? Tive um sonho estranho ontem à noite. Sonhei que uma velha me trazia um toco de vela e falava umas coisas estranhas. E o pior, sonhei que dormia com ela na minha cam...MÃÃÃÃE? Ai, meu deus, esse osso de gente na minha cama! MÃE???? Socorro! (barulho de procissão)',
   },
   bruxa: {
-    id: 'bruxa',
     title: 'A BRUXA',
     subtitle: '<b>CONTO – A BRUXA</b>, narrado por Keilla Borges',
     audioUrl: bruxa,
@@ -165,7 +175,6 @@ export const mapImageData: MapIcon = {
       'Pronto, descobriu, sou bruxa! E você está dentro de casa, trancado, comigo. Perdi um dedo com a sua tesoura brilhante na janela, mas eu continuo com o resto todo, Manqueba. Inclusive, eu continuo junta à força de todas as Bruxas da Pedro Celestino e se você me perturbar mais, eu chamo o bairro inteiro. E agora, estamos só nós dois. A bruxa e o maneta. Eu sem um dedo, você sem o braço inteiro. Tá a fim de querer saber o que vai ser de você? (risada forte da mulher. Barulho de porta abrindo, passos do marido correndo).',
   },
   padre: {
-    id: 'padre',
     title: 'É O QUE TE VALE – O PADRE',
     subtitle:
       '<b>CONTO – É O QUE TE VALE – O PADRE</b>, narrado por Rogério Santana',
@@ -192,7 +201,6 @@ export const mapImageData: MapIcon = {
       'Por que alma do outro mundo não atravessa água. Olhe, esse negócio de fantasma não pular poça d’água acho um saco. Regra demais pra ser morto, eu pensei que a ter menos regra. Meu deus, deixaram roupa no chão. Ei, ei, esqueceram a calcinha da menina aqui, gente! Isso na mão do povo é problema. Ei, ei, pessoal! Agora é que deu, vou ser obrigado a rezar o terço com cheiro de... de... de de... Avé Maria, cheia de graça, o Senhor é convosco, bendita sois vós entre as mulheres e bendito é o fruto do vosso ventre, Jesus. Santa Maria, Mãe de Deus, rogai por nós pecadores, agora e na hora da nossa morte. Amém.',
   },
   igreja: {
-    id: 'igreja',
     title: 'ALAVANCA DE OURO',
     subtitle: '<b>CONTO – ALAVANCA DE OURO</b>, narrado por Bruno Botelho',
     audioUrl: alavanca,
@@ -215,5 +223,124 @@ export const mapImageData: MapIcon = {
       'A alavanca preciosa guardada pela mãe terra entendia que aquela procura não ia dar em boa coisa. Foi o próprio ouro que incendiou a fundação de nossa cidade. Foi o próprio ouro o Armagedon de Cuiabá. Uma alavanca, senhoras e senhoras, debaixo da terra, promovendo vingança a tanto sangue derrubado. “Meu querido marido, meu nêgo, sangrando te peço, não dê fidelidade a quem só nos presenteou com ataque.” Só sobrou o tal escravo, que chorava ao ver tua mulher descer os córregos da prainha mortinha, mortinha.' +
       '<br><br>' +
       'E jurava ali, entre os corpos de brancos e negros, nunca mais trabalhar para quem guerreava. O chão então se fechou, a alavanca de ouro jogou, finalmente, uma esfera de pedra e o homem tornou-se livre e profeta. Hoje, séculos depois, escutem este profeta para que a terra não se repita. Carrego o sangue de meus ancestrais escravizados e profetizo para continuar o seu legado. Cuiabá pode se findar se a guerra pelo capital continuar. Aqui está a cara da cidade, pavimentada com asfalto e carros que rodeiam a praça, mas aqui também está debaixo destas colinas, uma alavanca de ouro, prontinha, prontinha para jogar suas bolas de fogo. Cuidado, no dia que a anhuma cantar, Cuiabá se reconstruirá.',
+  },
+};
+
+export const mapBuildingData: MapBuilding = {
+  paroquia: {
+    title: 'PARÓQUIA SÃO GONÇALO',
+    local: 'Av. XV de Novembro, 664 - Centro Sul, Cuiabá - MT, 78020-300',
+    localUrl: 'https://goo.gl/maps/ieC2CrnkzXBK1YDH6',
+    description:
+      'A edificação da primeira Capela na Freguesia de D. Pedro II deveu-se aos esforços do Dr. José Carlos Pereira, terceiro Juiz do Foro de Minas de Cuiabá, depois ouvidor da Vila do Bom Jesus de Cuiabá, cargo este ocupado em substituição a Luiz de Azevedo Sampaio. Ao assumir o cargo de ouvidor-Geral, fez uma visita de inspeção à Freguesia, onde se constatou a situação da capela em estado de abandono.' +
+      '<br><br>' +
+      'Iniciou a construção da Igreja em 1782 e, ali celebrou-se a missa inaugural na manhã de 15/11/1782. Durante a Guerra do Paraguai para lá foram transferidas imagens dos fortes de Coimbra e Corumbá. Ao longo dos anos, o templo passou por diversas reformas até chegar a composição arquitetônica que começa a ser definida em 1894 com a chegada da Missão Salesiana em Mato Grosso, dando-lhe o estilo colonial - neoclássico. Em 1916 foi incorporado seu último adereço a imagem do Cristo Redentor.',
+  },
+  sesc: {
+    title: 'SESC ARSENAL',
+    local: 'Rua 13 de Junho, 1435 - Centro Sul, Cuiabá - MT, 78020-000',
+    localUrl: 'https://goo.gl/maps/iYW6YvCiC9v99o6S7',
+    description:
+      'Remonta ao "Real Trem de Guerra", criado em 1818 por Carta Régia de João VI de Portugal, que se constituía em um estabelecimento militar para o fabrico, reparo e depósito de armamento na então Província do Mato Grosso. As obras para a construção do edifício foram iniciadas em 1819, no governo do 9º e último Capitão General do Mato Grosso, Francisco de Paula Magessi Tavares de Carvalho, estando concluídas em 1832, quando foi inaugurado. No ano anterior, por determinação do governo regencial, havia sido criado o "Arsenal de Guerra da Província de Mato Grosso" (15 de novembro de 1831).' +
+      '<br><br>' +
+      'O edifício foi posteriormente ampliado e remodelado. Os varandões dos flancos foram construídos em 1848.' +
+      '<br><br>' +
+      'No mês de janeiro de 1920, recebeu em suas instalações o 16º Batalhão de Caçadores (16º BC), atual 44º Batalhão de Infantaria Motorizado, que instalado em Corumbá-MS, havia sido designado a se estabelecer em Cuiabá-MT. O 16º BC permaneceu utilizando as instalações do Arsenal de Guerra até o ano de 1942, quando passou a ocupar as suas instalações atuais na antiga Av. Lava pés, no bairro Duque de Caxias.' +
+      '<br><br>' +
+      'Atualmente em bom estado de conservação, encontra-se tombado pela Portaria nº 63/83, publicada em Diário Oficial em 9 de janeiro de 1984, constituindo o Espaço Cultural SESC na cidade.',
+  },
+  santuario: {
+    title: 'SANTUÁRIO NOSSA SENHORA AUXILIADORA',
+    local: 'Av. Dom Bosco, 631-749 - Dom Aquino, Cuiabá - MT, 78015-180',
+    localUrl: 'https://goo.gl/maps/6P7VpJkRe357uXms8',
+    description:
+      'A igreja de Nossa Senhora Auxiliadora é uma igreja de Cuiabá, no estado brasileiro de Mato Grosso, construída na década de 1914 por Salesianos e dedicada a Nossa Senhora Auxiliadora. Em estilo neogótico, está localizada na avenida Tenente-Coronel Duarte e é a única igreja da cidade que possui abóbadas de aresta.' +
+      '<br><br>' +
+      'O projeto e edificação se deu sob a direção do Padre Francisco de Aquino Correa SDB, que logo fora ordenado Bispo da Prelazia do Senhor Bom Jesus, da qual pertencia praticamente todo o estado de Mato Grosso.' +
+      '<br><br>' +
+      'O Santuário é anexo ao Colégio Salesiano São Gonçalo. E está na região mais tradicional da cidade de Cuiabá, pertencente a primeira paróquia Salesiana do mundo, a paróquia São Gonçalo do Porto.',
+  },
+  palacio: {
+    title: 'PALÁCIO DA INSTRUÇÃO',
+    local: 'R. Antônio Maria Coelho, 151 - Centro, Cuiabá - MT, 78020-270',
+    localUrl: 'https://goo.gl/maps/SE5GU27SsSnyUCMx8',
+    description:
+      'Construído em 1913, no estilo neoclássico, inicialmente abrigava os colégios Pedro Celestino e Liceu Cuiabano. Atualmente é a sede da Secretaria Estadual de Cultura, do Museu de História Natural e Antropologia e da Biblioteca Pública.' +
+      '<br><br>' +
+      'O Palácio passou por reformas recentes. Localizado na região central de Cuiabá ao lado da Catedral Metropolitana, na época Natalina recebe iluminação especial e é palco de diversas atrações culturais.',
+  },
+  catedral: {
+    title: 'CATEDRAL BASÍLICA DO SENHOR BOM JESUS',
+    local: 'Praça da República, s/n - Centro Norte, Cuiabá - MT, 78005-240',
+    localUrl: 'https://goo.gl/maps/J6ok3FK5AZzsDZTq7',
+    description:
+      'Construída em 1723, inicialmente de pau-a-pique, a igreja matriz de Cuiabá, dedicada ao Senhor Bom Jesus, foi reconstruída em taipa entre 1739 e 1740, enquanto a primeira torre sineira data de 1769. Ela tornou-se sede da prelazia em 6 de dezembro de 1745, sendo elevada à diocese de Cuiabá em 15 de julho de 1826. Em 1868, passou por uma reforma que lhe alterou a torre e a fachada, novamente modificadas na década de 1920, ao mesmo tempo que a segunda torre era construída. Em 5 de abril de 1910, a diocese foi elevada à arquidiocese.' +
+      '<br><br>' +
+      'Com o pensamento modernizante vigente na década de 1960, tomou-se a decisão de demoli-la, o que ocorreu em 14 de agosto de 1968, somente após várias cargas de  dinamite, ato que por vários anos foi lembrado e lamentado. Seu antigo relógio, da marca Michelini, pode ainda ser visto hoje no Museu de Arte Sacra de Mato Grosso. No lugar da antiga igreja foi construído um templo novo, de concreto armado, obra que começou pela capela-mor, aos fundos, antes mesmo da demolição completa da antiga igreja, e foi inaugurada em 24 de maio de 1973. Ela foi declarada basílica menor em 15 de novembro de 1974.',
+  },
+  cine: {
+    title: 'CINE TEATRO CUIABÁ',
+    local: 'Av. Pres. Getúlio Vargas, n° 161 – Centro – Cuiabá-MT',
+    localUrl: 'https://goo.gl/maps/mMaJ1sSibdeBy7bv6',
+    description:
+      'O Cine Teatro Cuiabá foi inaugurado em 23 de maio de 1942, durante o governo de Júlio Strübing Muller e fazia parte do conjunto de “obras oficiais” do Estado Novo. Com seu estilo arquitetônico art-decó e uma capacidade para 600 pessoas, a partir desta data o Cine Teatro Cuiabá ocupou-se de oferecer à sociedade mato-grossense, uma programação diversificada de filmes e peças teatrais nacionais. Esse espaço cultural recebeu renomados artistas brasileiros daquele período, como exemplo, o primeiro filme exibido foi “A noiva veio como encomenda” da Warner Bros, estrelado por Bety Davis e James Cagney.' +
+      '<br><br>' +
+      'A construção do Cine Teatro Cuiabá deu à capital mato-grossense uma nova e importante conotação no aspecto social, cultural e econômico do Estado. Tornou-se o principal ponto de encontro da sociedade cuiabana nas décadas de 50 e 60 com seu salão de chá, cinema e teatro, o que proporcionava à população em geral, um novo referencial em entretenimento. Serviu também como referência da circulação pela capital de ilustres autoridades nacionais como políticos, empresários e artistas e pode ser alvo de um volumoso fluxo de espetáculos e atividades artísticas por várias décadas o que o colocou como elemento de contribuição político-social para a permanência da cidade de Cuiabá como capital de Mato Grosso.' +
+      '<br><br>' +
+      'Em 1984 ocorre o seu tombamento, definindo-o como patrimônio histórico e artístico do cenário arquitetônico de Mato Grosso. O Cine Teatro Cuiabá é patrimônio da Secretaria de Estado de Cultura, doando à extinta Fundação Cultural de Mato Grosso pelo Governo do Estado. É constituído como Patrimônio Histórico e Artístico Estadual, tombado pela Fundação Cultural de Mato Grosso. O Cine Teatro Cuiabá, se estabeleceu como um centro das atividades culturais cuiabanas por mais de 55 anos e mesmo sendo um marco da evolução sociocultural da capital, foi arrendado por várias vezes e a partir de 1996, ficou fechado por quase 12 anos.' +
+      '<br><br>' +
+      'Após uma grande reforma que manteve as características arquitetônicas da época de sua construção, o Governo do Estado, por meio da Secretaria de Estado de Cultura – SEC e da Secretaria de Estado de Infraestrutura – Sinfra, devolve à sociedade Cuiabá, o centro cultural que marcou a história de Cuiabá com a exibição de inúmeras produções cinematográficas e teatrais por várias décadas.' +
+      '<br><br>' +
+      'O Cine Teatro Cuiabá teve as suas portas reabertas no dia 21 de maio de 2009 e contou com a presença de inúmeras autoridades mato-grossenses na sua reinauguração. Além da presença musical da Orquestra de Câmara do Estado de Mato Grosso e da exibição de um documentário sobre a sua história.',
+  },
+  mandioca: {
+    title: 'PRAÇA DA MANDIOCA',
+    local: 'R. Pedro Celestino, S/N - Centro Norte, Cuiabá - MT, 78005-010',
+    localUrl: 'https://goo.gl/maps/LxoFNxGWxYXfwoFYA',
+    description:
+      'É um dos mais antigos logradouros públicos de Cuiabá. Recebeu também os nomes de Praça Real e Praça Conde Azambuja. Esta praça abrigou o antigo Palácio dos Capitães Generais, construído em 1726, no chamado “Canto do Sebo”. O Largo também era conhecido como o ponto final da linha de bondes tocada a burros, que pertencia à Companhia Progresso Cuiabano, inaugurada em 1891. No ano de 2004, ocorre na Praça da Mandioca, no centro histórico da capital, hoje tombado pelo IPHAN, inúmeras atividades culturais, especialmente ligadas à música, sempre contando com presença de famílias cuiabanas que residem no entorno daquele logradouro.',
+  },
+  relogio: {
+    title: 'RELÓGIO CUIABÁ 300 ANOS',
+    local:
+      'Av. Historiador Rubens de Mendonça, 1035 - Araes, Cuiabá - MT, 78005-000',
+    localUrl: 'https://goo.gl/maps/73PBvWgBF2WztdiB9',
+    description:
+      'O emblemático relógio, que marca a contagem regressiva dos 300 anos de Cuiabá, localizado na avenida Mato Grosso, foi entregue em 2018.' +
+      '<br><br>' +
+      'O relógio possui uma estrutura moderna, com 15 metros de altura, 6 metros de largura, contando ainda com um painel de alta resolução P10 em full HD, com 20 m² em cada face, e formato de viola de cocho, para valorizar as raízes e cultura da capital mato-grossense.' +
+      '<br><br>' +
+      'A obra foi realizada com 100% de verba oriunda da iniciativa privada. A empresa responsável pela construção, a OnWay Mídia, projetou um mapeamento de brilho e luminosidade da região de acordo com o ambiente externo, com o objetivo de garantir uma harmonização em meio às vias que cruzam o local.' +
+      '<br><br>' +
+      'Essa tecnologia permite que a intensidade da luz emitida pelos telões seja equilibrada, conforme a claridade natural. Ao final da tarde, o brilho da tela é reduzido gradativamente, fazendo com que seja mais confortável à visão dos motoristas, importante para não comprometer o tráfego da avenida. Já ao longo do dia, a luminosidade se equipara ao painel, para que sua visibilidade se mantenha adequada.',
+  },
+};
+
+export const mapMapExplanationData: MapExplanation = {
+  doubts: {
+    introduction:
+      'Bem vind_ ao Passeio Sonoro! Neste passeio, deixe-se transportar para as ruelas do Centro Histórico, através das lendas urbanas, narradas e contadas pelos atores do Grupo Tibanaré. Siga o mapa interativo para descobrir e vivenciar a s histórias que passeiam até hoje por Cuiabá. A experiência é mais completa utilizando fones de ouvido. Aproveite!',
+    text:
+      'Esta experiência foi pensada em meados de 2015, após o Grupo Tibanaré realizar a primeira temporada do espetáculo Passeio Noturno, no centro histórico de Cuiabá, inspirado no livro “Cuiabá - Roteiro das Lendas”, escrito por Dunga Rodrigues. Os espectadores desejavam descobrir mais sobre o universo do espetáculo, então surge a ideia do Passeio Sonoro, que em 2022 se concretiza através da Lei Aldir Blanc - com uma homenagem do Grupo Tibanaré à memória e ao legado de Dunga Rodrigues (Edital Conexão Mestres da Cultura - Secretaria de Cultura, Esporte e Lazer de Mato Grosso).' +
+      '<br><br>' +
+      'Além de vivenciar os seis episódios que estão disponíveis neste aplicativo, convidamos você para visitar e conhecer a extraordinária artista Dunga Rodrigues, na exposição virtual “Emplumo as asas e me solto pelo infinito – Dunga Rodrigues”: biografia, fotografias inéditas, partituras, músicas e outras obras desta artista que marcou a história da arte em Mato Grosso.' +
+      '<br><br>' +
+      'E acompanhe a gente pelas redes sociais: @grupotibanare',
+  },
+  team: {
+    introduction: 'Ficha técnica - Passeio Sonoro',
+    text:
+      'Idealização: Fernanda Gandes, Jefferson Jarcem e Naine Terena ' +
+      'Elenco: Bruno Botelho, Juliana Graziela, Keilla Borges, Rogério Santana, Valter Lara e Vini Hoffman ' +
+      'Direção: Jefferson Jarcem ' +
+      'Adaptação do roteiro: Daniel Arcades ' +
+      'Preparação de elenco: Felipe Lima' +
+      'Captação de áudio: Moby Dick Produções' +
+      'Desenho de som: Pedro Caetano' +
+      'Ilustrações: Heryck Gaby' +
+      'Desenvolvedores do aplicativo: Tecnoon Tecnologia & Inovação.' +
+      'Produção executiva: Fernanda Gandes' +
+      'Assistente de produção: Cacau Borges' +
+      'Organização administrativa: Karine Mattos Fotos: Conservatório Dunga Rodrigues',
   },
 };
