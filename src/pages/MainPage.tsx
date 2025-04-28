@@ -6,10 +6,10 @@ import { mainMenuLinks } from '../assets/data/imagesData';
 const MainPage = () => {
   return (
     <section
-      className='
-        bg-[url(/images/background/main-bg-blue-mobile.jpg)] 
-        md:bg-[url(/images/background/main-bg-blue.jpg)]
-      '
+      className={
+        "bg-[url('/mapasonoro/images/background/main-bg-blue-mobile.jpg')] " +
+        "md:bg-[url('/mapasonoro/images/background/main-bg-blue-mobile.jpg')]"
+      }
     >
       <div
         className='

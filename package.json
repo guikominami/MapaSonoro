@@ -1,7 +1,8 @@
 {
   "name": "mapa-sonoro",
+  "homepage": "https://mudalab.com.br/mapasonoro/",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

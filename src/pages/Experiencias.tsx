@@ -37,8 +37,8 @@ const Experiencias = () => {
   return (
     <section
       className='
-        bg-[url(/images/map/mapa-mobile.jpg)] 
-        md:bg-[url(/images/map/mapa-desktop.jpg)]
+        bg-[url(/mapasonoro/images/map/mapa-mobile.jpg)] 
+        md:bg-[url(/mapasonoro/images/map/mapa-desktop.jpg)]
         bg-cover bg-no-repeat h-[690px]
       '
     >

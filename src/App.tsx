@@ -7,7 +7,7 @@ import Exposicao from './pages/Exposicao';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename={'/mapasonoro/'}>
         <Routes>
           <Route path='/' element={<MainPage />} />
           <Route path='/experiencias' element={<Experiencias />} />
