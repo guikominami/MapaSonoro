@@ -4,11 +4,13 @@ import Footer from '../components/Footer';
 import { mainMenuLinks } from '../assets/data/imagesData';
 
 const MainPage = () => {
+  //const baseDir = import.meta.env.BASE_URL;
+
   return (
     <section
       className={
-        "bg-[url('/mapasonoro/images/background/main-bg-blue-mobile.jpg')] " +
-        "md:bg-[url('/mapasonoro/images/background/main-bg-blue-mobile.jpg')]"
+        "bg-[url('/images/background/main-bg-blue-mobile.jpg')]" +
+        "md:bg-[url('/images/background/main-bg-blue-mobile.jpg')"
       }
     >
       <div

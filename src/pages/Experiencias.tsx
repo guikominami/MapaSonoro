@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
+import Section from '../components/Section';
+
 import iconVoltar from '../assets/imgs/icon-voltar.png';
 import iconCarroca from '../assets/imgs/map/icons/icon-carroca.png';
 import iconBruxas from '../assets/imgs/map/icons/icon-bruxas.png';
@@ -21,8 +23,6 @@ import MapPanelBuilding from '../components/MapPanel/MapPanelBuilding';
 import MapPanelExplanation from '../components/MapPanel/MapPanelExplanation';
 
 const Experiencias = () => {
-  const baseDir = import.meta.env.BASE_URL;
-
   const [openPanel, setOpenPanel] = useState<number>(0);
 
   const [idMapIcon, setIdMapIcon] = useState<string>('');
@@ -37,13 +37,7 @@ const Experiencias = () => {
   }
 
   return (
-    <section
-      className={`
-          bg-[url(${baseDir}images/map/mapa-mobile.jpg)]
-          md:bg-[url(${baseDir}images/map/mapa-desktop.jpg)]
-          bg-cover bg-no-repeat h-[690px]
-        `}
-    >
+    <Section imgMobile='mapa-mobile' imgDesktop='mapa-desktop'>
       {openPanel === 1 && (
         <MapPanel iconId={idMapIcon} onCloseIconClick={handleIconCloseClick} />
       )}
@@ -159,7 +153,7 @@ const Experiencias = () => {
           onButtonClick={() => handleButtonClick('team', 4)}
         />
       </div>
-    </section>
+    </Section>
   );
 };
 

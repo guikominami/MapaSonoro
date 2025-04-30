@@ -1,13 +1,10 @@
+import Section from '../components/Section';
+
 const Exposicao = () => {
   return (
-    <section
-      className='
-        bg-[url(/images/map/mapa-mobile.jpg)] 
-        md:bg-[url(/images/map/mapa-desktop.jpg)]
-      '
-    >
+    <Section imgMobile='' imgDesktop=''>
       <div></div>
-    </section>
+    </Section>
   );
 };
 
