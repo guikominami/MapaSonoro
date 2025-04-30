@@ -21,6 +21,8 @@ import MapPanelBuilding from '../components/MapPanel/MapPanelBuilding';
 import MapPanelExplanation from '../components/MapPanel/MapPanelExplanation';
 
 const Experiencias = () => {
+  const baseDir = import.meta.env.BASE_URL;
+
   const [openPanel, setOpenPanel] = useState<number>(0);
 
   const [idMapIcon, setIdMapIcon] = useState<string>('');
@@ -36,11 +38,11 @@ const Experiencias = () => {
 
   return (
     <section
-      className='
-        bg-[url(/mapasonoro/images/map/mapa-mobile.jpg)] 
-        md:bg-[url(/mapasonoro/images/map/mapa-desktop.jpg)]
-        bg-cover bg-no-repeat h-[690px]
-      '
+      className={`
+          bg-[url(${baseDir}images/map/mapa-mobile.jpg)]
+          md:bg-[url(${baseDir}images/map/mapa-desktop.jpg)]
+          bg-cover bg-no-repeat h-[690px]
+        `}
     >
       {openPanel === 1 && (
         <MapPanel iconId={idMapIcon} onCloseIconClick={handleIconCloseClick} />
