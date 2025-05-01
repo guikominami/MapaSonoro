@@ -36,11 +36,11 @@ const Experiencias = () => {
 
   return (
     <section
-      className={
-        'bg-[url(images/map/mapa-mobile.jpg)] ' +
-        'md:bg-[url(images/map/mapa-desktop.jpg)] ' +
-        'bg-cover bg-no-repeat h-[690px]'
-      }
+      className='
+        bg-[url(/images/map/mapa-mobile.jpg)] 
+        md:bg-[url(/images/map/mapa-desktop.jpg)] 
+        bg-cover bg-no-repeat h-[690px]
+      '
     >
       {openPanel === 1 && (
         <MapPanel iconId={idMapIcon} onCloseIconClick={handleIconCloseClick} />
