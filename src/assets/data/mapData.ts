@@ -322,7 +322,7 @@ export const mapMapExplanationData: MapExplanation = {
     text:
       'Bem vind_ ao Passeio Sonoro! Neste passeio, deixe-se transportar para as ruelas do Centro Histórico, através das lendas urbanas, narradas e contadas pelos atores do Grupo Tibanaré. Siga o mapa interativo para descobrir e vivenciar a s histórias que passeiam até hoje por Cuiabá. A experiência é mais completa utilizando fones de ouvido. Aproveite!' +
       '<br><br>' +
-      "<img src='/images/map/separador.png' style='width: 80%;margin-left: 10%;'>" +
+      "<img src='images/map/separador.png' style='width: 80%;margin-left: 3%;'>" +
       '<br>' +
       'Esta experiência foi pensada em meados de 2015, após o Grupo Tibanaré realizar a primeira temporada do espetáculo Passeio Noturno, no centro histórico de Cuiabá, inspirado no livro “Cuiabá - Roteiro das Lendas”, escrito por Dunga Rodrigues. Os espectadores desejavam descobrir mais sobre o universo do espetáculo, então surge a ideia do Passeio Sonoro, que em 2022 se concretiza através da Lei Aldir Blanc - com uma homenagem do Grupo Tibanaré à memória e ao legado de Dunga Rodrigues (Edital Conexão Mestres da Cultura - Secretaria de Cultura, Esporte e Lazer de Mato Grosso).' +
       '<br><br>' +

@@ -9,7 +9,6 @@ import iconDunga from '../assets/imgs/map/icons/icon-dunga.png';
 import iconIgreja from '../assets/imgs/map/icons/icon-igreja.png';
 import iconDuvida from '../assets/imgs/map/icons/icon-duvidas.png';
 import iconFicha from '../assets/imgs/map/icons/icon-ficha-mapa.png';
-import imgMapMobile from '../assets/imgs/map/mapa-mobile.jpg';
 
 import IconMapButton from '../components/IconMapButtonTales';
 import IconMapButtonBuildings from '../components/IconMapButtonBuildings';
@@ -34,119 +33,118 @@ const Experiencias = () => {
   }
 
   return (
-    <section>
-      <div id='map' className='relative'>
-        <img src={imgMapMobile} alt='' />
+    <section
+      className='
+        bg-[url(/images/map/mapa-mobile.jpg)] 
+        md:bg-[url(/images/map/mapa-desktop.jpg)] 
+        bg-contain bg-no-repeat h-[690px]
+      '
+    >
+      {openPanel === 1 && (
+        <MapPanel iconId={idMapIcon} onCloseIconClick={handleIconCloseClick} />
+      )}
 
-        {openPanel === 1 && (
-          <MapPanel
-            iconId={idMapIcon}
-            onCloseIconClick={handleIconCloseClick}
-          />
-        )}
+      {openPanel === 2 && (
+        <MapPanelDunga onCloseIconClick={handleIconCloseClick} />
+      )}
 
-        {openPanel === 2 && (
-          <MapPanelDunga onCloseIconClick={handleIconCloseClick} />
-        )}
+      {openPanel === 3 && (
+        <MapPanelBuilding
+          iconId={idMapIcon}
+          onCloseIconClick={handleIconCloseClick}
+        />
+      )}
 
-        {openPanel === 3 && (
-          <MapPanelBuilding
-            iconId={idMapIcon}
-            onCloseIconClick={handleIconCloseClick}
-          />
-        )}
-
-        {openPanel === 4 && (
-          <MapPanelExplanation
-            iconId={idMapIcon}
-            onCloseIconClick={handleIconCloseClick}
-          />
-        )}
-
-        <BackButton />
-
+      {openPanel === 4 && (
+        <MapPanelExplanation
+          iconId={idMapIcon}
+          onCloseIconClick={handleIconCloseClick}
+        />
+      )}
+      <BackButton />
+      <div id='map'>
         <IconMapButton
-          position='w-18 absolute top-[10%] left-[13%]'
+          position='w-18 relative top-8 left-13'
           iconName={iconCarroca}
           alternativeText='Carroça'
           onButtonClick={() => handleButtonClick('carroca', 1)}
         />
         <IconMapButton
-          position='w-16 absolute top-[15%] left-[30%]'
+          position='w-16 relative top-4 left-29'
           iconName={iconBruxas}
           alternativeText='Bruxas'
           onButtonClick={() => handleButtonClick('bruxa', 1)}
         />
         <IconMapButton
-          position='w-18 absolute top-[23%] left-[39%]'
+          position='w-18 relative top-4 left-38'
           iconName={iconBarao}
           alternativeText='Barão'
           onButtonClick={() => handleButtonClick('barao', 1)}
         />
         <IconMapButton
-          position='w-18 absolute top-[14%] left-[56%]'
+          position='w-18 absolute top-30 left-56'
           iconName={iconPadre}
           alternativeText='padre'
           onButtonClick={() => handleButtonClick('padre', 1)}
         />
         <IconMapButton
-          position='w-18 absolute top-[9%] right-[8%]'
+          position='w-18 absolute top-18 right-6'
           iconName={iconIgreja}
           alternativeText='igreja'
           onButtonClick={() => handleButtonClick('igreja', 1)}
         />
         <IconMapButton
-          position='w-16 absolute top-[32%] left-[42%]'
+          position='w-16 absolute top-52 left-40'
           iconName={iconNoiva}
           alternativeText='Noiva'
           onButtonClick={() => handleButtonClick('noiva', 1)}
         />
         <IconMapButton
-          position='w-16 absolute top-[83%] left-[30%]'
+          position='w-16 absolute top-[85%] left-[30%]'
           iconName={iconDunga}
           alternativeText='Dunga Rodrigues'
           onButtonClick={() => handleButtonClick('dunga', 2)}
         />
         <IconMapButtonBuildings
-          position='absolute top-[13%] left-[46%]'
+          position='absolute top-24 left-46'
           onButtonClick={() => handleButtonClick('mandioca', 3)}
         />
         <IconMapButtonBuildings
-          position='absolute top-[6%] left-[54%]'
+          position='absolute top-12 left-52'
           onButtonClick={() => handleButtonClick('relogio', 3)}
         />
         <IconMapButtonBuildings
-          position='absolute top-[26%] left-[23%]'
+          position='absolute top-48 left-23'
           onButtonClick={() => handleButtonClick('cine', 3)}
         />
         <IconMapButtonBuildings
-          position='absolute top-[32%] left-[32%]'
+          position='absolute top-54 left-30'
           onButtonClick={() => handleButtonClick('catedral', 3)}
         />
         <IconMapButtonBuildings
-          position='absolute top-[40%] left-[27%]'
+          position='absolute top-68 left-26'
           onButtonClick={() => handleButtonClick('palacio', 3)}
         />
         <IconMapButtonBuildings
-          position='absolute top-[56%] left-[34%]'
+          position='absolute bottom-56 left-32'
           onButtonClick={() => handleButtonClick('santuario', 3)}
         />
         <IconMapButtonBuildings
-          position='absolute top-[80%] left-[12%]'
+          position='absolute bottom-17 left-11'
           onButtonClick={() => handleButtonClick('sesc', 3)}
         />
         <IconMapButtonBuildings
-          position='absolute top-[92%] left-[14%]'
+          position='absolute top-158 left-14'
           onButtonClick={() => handleButtonClick('paroquia', 3)}
         />
         <IconMapButton
-          position='w-10 absolute top-[89%] right-[14%]'
+          position='w-10 absolute top-145 right-13'
           iconName={iconDuvida}
           alternativeText='Dúvidas'
           onButtonClick={() => handleButtonClick('doubts', 4)}
         />
         <IconMapButton
-          position='w-10 absolute top-[89%] right-[5%]'
+          position='w-10 absolute top-145 right-4'
           iconName={iconFicha}
           alternativeText='Ficha técnica'
           onButtonClick={() => handleButtonClick('team', 4)}

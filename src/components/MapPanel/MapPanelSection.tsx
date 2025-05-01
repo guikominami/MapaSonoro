@@ -9,7 +9,7 @@ const MapPanelSection: React.FC<{
     <div
       className='
         bg-[url(/images/background/main-bg-white.jpg)] 
-        h-fit w-[100%] absolute z-10 px-4
+        h-fit w-[100%] absolute top-0 z-10 px-4
         flex flex-col '
     >
       <span className='flex justify-end mr-1 mt-4'>
