@@ -2,8 +2,6 @@ import { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import Section from '../components/Section';
-
 import iconVoltar from '../assets/imgs/icon-voltar.png';
 import iconCarroca from '../assets/imgs/map/icons/icon-carroca.png';
 import iconBruxas from '../assets/imgs/map/icons/icon-bruxas.png';
@@ -37,7 +35,13 @@ const Experiencias = () => {
   }
 
   return (
-    <Section imgMobile='mapa-mobile' imgDesktop='mapa-desktop'>
+    <section
+      className={
+        'bg-[url(images/map/mapa-mobile.jpg)] ' +
+        'md:bg-[url(images/map/mapa-desktop.jpg)] ' +
+        'bg-cover bg-no-repeat h-[690px]'
+      }
+    >
       {openPanel === 1 && (
         <MapPanel iconId={idMapIcon} onCloseIconClick={handleIconCloseClick} />
       )}
@@ -153,7 +157,7 @@ const Experiencias = () => {
           onButtonClick={() => handleButtonClick('team', 4)}
         />
       </div>
-    </Section>
+    </section>
   );
 };
 

@@ -1,10 +1,8 @@
-import Section from '../components/Section';
-
 const Exposicao = () => {
   return (
-    <Section imgMobile='' imgDesktop=''>
+    <section>
       <div></div>
-    </Section>
+    </section>
   );
 };
 
