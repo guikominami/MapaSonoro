@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import iconVoltar from '../assets/imgs/icon-voltar.png';
 
-const BackButton = () => {
+const BackButton: React.FC<{ linkToGoBack: string }> = ({ linkToGoBack }) => {
   return (
-    <Link className='absolute top-[1%] left-[2%]' to='/'>
+    <Link className='absolute top-[2%] left-[3%]' to={linkToGoBack}>
       <img className='w-20' src={iconVoltar} alt='voltar' />
     </Link>
   );

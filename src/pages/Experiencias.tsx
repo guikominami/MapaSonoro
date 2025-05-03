@@ -63,7 +63,7 @@ const Experiencias = () => {
           />
         )}
 
-        <BackButton />
+        <BackButton linkToGoBack='/' />
 
         <IconMapButton
           position='w-18 absolute top-[10%] left-[13%]'

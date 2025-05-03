@@ -1,16 +1,13 @@
 import React, { ReactNode } from 'react';
 
-const Section: React.FC<{ children: ReactNode; imageMobileUrl: string }> = ({
-  imageMobileUrl,
-  children,
-}) => {
+const Section: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <section
-      className={`
-        bg-[url(/images/${imageMobileUrl})] 
-        md:bg-[url(/images/background/main-bg-blue.jpg)] 
+      className='
+        bg-[url(images/background/main-bg-blue-mobile.jpg)] 
+        md:bg-[url(images/background/main-bg-blue.jpg)] 
         bg-cover bg-no-repeat h-[690px]
-      `}
+      '
     >
       {children}
     </section>

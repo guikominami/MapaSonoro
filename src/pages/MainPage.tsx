@@ -1,3 +1,4 @@
+import Section from '../components/Section';
 import MainMenuButton from '../components/MainMenuButton';
 import Footer from '../components/Footer';
 
@@ -7,12 +8,12 @@ const MainPage = () => {
   //const baseDir = import.meta.env.BASE_URL;
 
   return (
-    <section
-      className='
-        bg-[url(/images/background/main-bg-blue-mobile.jpg)] 
-        md:bg-[url(/images/background/main-bg-blue.jpg)] 
-        bg-cover bg-no-repeat h-[690px]
-      '
+    <Section
+    // className='
+    //   bg-[url(/images/background/main-bg-blue-mobile.jpg)]
+    //   md:bg-[url(/images/background/main-bg-blue.jpg)]
+    //   bg-cover bg-no-repeat h-[690px]
+    // '
     >
       <div
         className='
@@ -30,7 +31,7 @@ const MainPage = () => {
         ))}
       </div>
       <Footer />
-    </section>
+    </Section>
   );
 };
 
