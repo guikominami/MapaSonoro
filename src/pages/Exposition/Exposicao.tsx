@@ -1,8 +1,8 @@
-import Section from '../components/Section';
-import BackButton from '../components/BackButton';
-import ExposicaoColumns from '../components/ExposicaoColumns';
+import Section from '../../components/Section';
+import BackButton from '../../components/BackButton';
+import ExposicaoColumns from '../../components/Expo/ColumnsExpo';
 
-import { expoMenuLinks } from '../assets/data/imagesData';
+import { expoMenuLinks } from '../../assets/data/imagesData';
 
 const Exposicao = () => {
   return (

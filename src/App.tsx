@@ -2,11 +2,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import MainPage from './pages/MainPage';
 import Experiencias from './pages/Experiencias';
-import Exposicao from './pages/Exposicao';
-import ObrasLiterarias from './pages/ObrasLiterarias';
-import Criancas from './pages/Criancas';
-import UniversoDunga from './pages/UniversoDunga';
-import FichaTecnica from './pages/FichaTecnica';
+import Exposicao from './pages/Exposition/Exposicao';
+import ObrasLiterarias from './pages/Exposition/ObrasLiterarias';
+import Criancas from './pages/Exposition/Criancas';
+import UniversoDunga from './pages/Exposition/UniversoDunga';
+import FichaTecnica from './pages/Exposition/FichaTecnica';
 
 function App() {
   return (

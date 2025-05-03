@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 
-const ButtonExposicao: React.FC<{
+const ButtonExpo: React.FC<{
   children: ReactNode;
   onButtonClick: () => void;
 }> = ({ children, onButtonClick }) => {
@@ -14,4 +14,4 @@ const ButtonExposicao: React.FC<{
   );
 };
 
-export default ButtonExposicao;
+export default ButtonExpo;

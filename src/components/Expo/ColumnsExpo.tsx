@@ -1,5 +1,5 @@
-import MainMenuButton from '../components/MainMenuButton';
-import { ImageLinks } from '../assets/data/imagesData';
+import MainMenuButton from '../MainMenuButton';
+import { ImageLinks } from '../../assets/data/imagesData';
 
 const ExposicaoColumns: React.FC<{
   imageLink1: ImageLinks;

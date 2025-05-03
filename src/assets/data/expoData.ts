@@ -1,4 +1,4 @@
-interface imgDataExpo {
+export interface imgDataExpo {
   id: number;
   title: string;
   imageUrl: string;
@@ -112,7 +112,7 @@ export const imgDataCriancas: imgDataExpo[] = [
   },
 ];
 
-export const imgLivros: imgDataExpo[] = [
+export const imgDataLivros: imgDataExpo[] = [
   {
     id: 1,
     title: 'Produção literária',
@@ -201,7 +201,7 @@ export const imgLivros: imgDataExpo[] = [
   },
 ];
 
-export const imgUniverso: imgDataExpo[] = [
+export const imgDataUniverso: imgDataExpo[] = [
   {
     id: 1,
     title: 'Um universo de Dunga Rodrigues',
