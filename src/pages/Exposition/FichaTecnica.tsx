@@ -5,8 +5,8 @@ const FichaTecnica = () => {
   return (
     <section
       className='
-        bg-[url(images/background/main-bg-white-map-vertical.jpg)] 
-        md:bg-[url(images/background/main-bg-white.jpg)] 
+        bg-[url(/images/background/main-bg-white-map-vertical.jpg)] 
+        md:bg-[url(/images/background/main-bg-white.jpg)] 
         bg-cover bg-no-repeat h-[690px]
       '
     >

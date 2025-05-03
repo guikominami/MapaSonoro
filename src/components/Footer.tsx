@@ -9,11 +9,11 @@ const Footer = () => {
     <div
       className='
         h-20 md:h-25 flex flex-row items-center
-        justify-around align-middle bg-black/40
+        justify-around align-middle bg-opacity-0  
       '
     >
       <div className='flex'>
-        <Instagram />
+        <Instagram iconWidth='40' iconHeight='40' />
         <LinkedIn />
       </div>
       <div>
