@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import MainPage from './pages/MainPage';
 import Experiencias from './pages/Experiencias';
-import Exposicao from './pages/Exposition/Exposicao';
+import ExpositionMenu from './pages/Exposition/ExpositionMenu';
 import ObrasLiterarias from './pages/Exposition/ObrasLiterarias';
 import Criancas from './pages/Exposition/Criancas';
 import UniversoDunga from './pages/Exposition/UniversoDunga';
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<MainPage />} />
           <Route path='/experiencias' element={<Experiencias />} />
-          <Route path='/exposicao' element={<Exposicao />} />
+          <Route path='/exposicao' element={<ExpositionMenu />} />
           <Route path='/exposicao/obras' element={<ObrasLiterarias />} />
           <Route path='/exposicao/criancas' element={<Criancas />} />
           <Route path='/exposicao/universo' element={<UniversoDunga />} />

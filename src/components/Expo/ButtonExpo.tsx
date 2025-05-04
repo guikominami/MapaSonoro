@@ -6,7 +6,11 @@ const ButtonExpo: React.FC<{
 }> = ({ children, onButtonClick }) => {
   return (
     <button
-      className='text-orange-400 mr-4 font-bold text-lg'
+      className='
+        text-orange-400 mr-4 
+        font-bold text-lg 
+        cursor-pointer
+      '
       onClick={onButtonClick}
     >
       {children}

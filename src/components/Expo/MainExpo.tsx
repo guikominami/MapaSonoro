@@ -43,7 +43,13 @@ const MainExposition: React.FC<{ imageData: imgDataExpo[] }> = ({
   return (
     <Section>
       <BackButton linkToGoBack='/exposicao' />
-      <div className='flex flex-col items-center pt-20'>
+      <div
+        className='
+          flex flex-col 
+          items-center
+          pt-20
+        '
+      >
         <ImageExpo
           animate={animate}
           imageUrl={baseDir + activeItem.imageUrl}
@@ -51,11 +57,15 @@ const MainExposition: React.FC<{ imageData: imgDataExpo[] }> = ({
           onNextImage={nextImageClick}
           onPreviousImage={previousImageClick}
         />
-
         <p className='text-white mt-4'>
           Clique na imagem para saber mais detalhes.
         </p>
-        <div className='flex items-stretch justify-between mt-2 '>
+        <div
+          className='
+            flex items-stretch 
+            justify-between mt-2
+          '
+        >
           <ButtonExpo onButtonClick={previousImageClick}>
             {'< Anterior'}
           </ButtonExpo>

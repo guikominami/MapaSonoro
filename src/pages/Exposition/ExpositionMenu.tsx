@@ -4,7 +4,7 @@ import MainMenuButton from '../../components/MainMenuButton';
 
 import { expoMenuLinks } from '../../assets/data/imagesData';
 
-const Exposicao = () => {
+const ExpositionMenu = () => {
   return (
     <Section>
       <BackButton linkToGoBack='/' />
@@ -28,13 +28,13 @@ const Exposicao = () => {
             imageUrl={expoMenuLinks[0].imageUrl}
             imageTextDescription={expoMenuLinks[0].imageTextDescription}
             link={expoMenuLinks[0].link}
-            size='40%'
+            size='large'
           />
           <MainMenuButton
             imageUrl={expoMenuLinks[1].imageUrl}
             imageTextDescription={expoMenuLinks[1].imageTextDescription}
             link={expoMenuLinks[1].link}
-            size='40%'
+            size='large'
           />
         </div>
         <div
@@ -49,13 +49,13 @@ const Exposicao = () => {
             imageUrl={expoMenuLinks[2].imageUrl}
             imageTextDescription={expoMenuLinks[2].imageTextDescription}
             link={expoMenuLinks[2].link}
-            size='40%'
+            size='large'
           />
           <MainMenuButton
             imageUrl={expoMenuLinks[3].imageUrl}
             imageTextDescription={expoMenuLinks[3].imageTextDescription}
             link={expoMenuLinks[3].link}
-            size='40%'
+            size='large'
           />
         </div>
       </div>
@@ -63,4 +63,4 @@ const Exposicao = () => {
   );
 };
 
-export default Exposicao;
+export default ExpositionMenu;

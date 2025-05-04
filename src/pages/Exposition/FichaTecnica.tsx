@@ -6,13 +6,15 @@ const FichaTecnica = () => {
     <section
       className='
         bg-[url(/images/background/main-bg-white-map-vertical.jpg)] 
-        md:bg-[url(/images/background/main-bg-white.jpg)] 
-        bg-cover bg-no-repeat h-[690px]
+        md:bg-[url(/images/background/main-bg-white-map-vertical.jpg)] 
+        bg-cover bg-no-repeat h-[690px] md:h-[878px]
       '
     >
       <BackButton linkToGoBack='/exposicao' />
-      <div className='py-20 px-6'>
-        <h1 className='text-2xl font-bold mb-6'>Ficha Ténica da Exposição</h1>
+      <div className='py-20 px-6 md:py-40 md:px-20'>
+        <h1 className='text-2xl md:text-4xl font-bold mb-6'>
+          Ficha Ténica da Exposição
+        </h1>
         <Paragraph>
           <b>Curadoria: </b>Naine Terena, Fernanda Gandes e Jefferson Jarcem
         </Paragraph>

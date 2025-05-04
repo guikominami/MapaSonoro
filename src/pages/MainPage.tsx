@@ -22,7 +22,7 @@ const MainPage = () => {
               link={item.link}
               imageUrl={item.imageUrl}
               imageTextDescription={item.imageTextDescription}
-              size='25%'
+              size='small'
             />
           ))}
         </div>

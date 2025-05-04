@@ -6,8 +6,10 @@ const MainMenuButton: React.FC<{
   imageTextDescription: string;
   size: string;
 }> = ({ link, imageUrl, imageTextDescription, size }) => {
+  const divSize =
+    size === 'large' ? 'w-[65%] md:w-[40%]' : 'w-[65%] md:w-[25%]';
   return (
-    <div className={`w-[65%] md:w-[${size}]`}>
+    <div className={divSize}>
       <Link to={link}>
         <img src={imageUrl} alt={imageTextDescription} />
       </Link>

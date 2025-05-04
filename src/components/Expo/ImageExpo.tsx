@@ -32,7 +32,7 @@ const ImageExpo: React.FC<{
       onTouchEnd={handleTouchEnd}
     >
       <img
-        className={`border-2 border-solid border-orange-400 transition-all duration-100 ease-in-out transform ${
+        className={`md:w-100 border-6 border-solid border-orange-400/60 transition-all duration-100 ease-in-out transform ${
           animate ? 'translate-x-2 opacity-0' : 'translate-x-0 opacity-100'
         }`}
         src={imageUrl}
