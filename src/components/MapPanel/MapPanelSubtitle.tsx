@@ -8,7 +8,7 @@ const MapPanelSubtitle: React.FC<{
 }> = ({ subtitle, audio }) => {
   return (
     <div className='mt-1 mb-4'>
-      <h2 className='text-sm mb-4'>{parse(subtitle)}</h2>
+      <h2 className='text-sm mb-4 md:text-lg'>{parse(subtitle)}</h2>
       <ReactAudioPlayer src={audio} controls />
     </div>
   );

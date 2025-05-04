@@ -8,7 +8,7 @@ const IconMapButtonBuildings: React.FC<{
 }> = ({ position, onButtonClick }) => {
   return (
     <div className={position}>
-      <button onClick={onButtonClick} className='w-13 h-13' />
+      <button onClick={onButtonClick} className='w-13 h-13 md:w-30 md:h-30' />
     </div>
   );
 };

@@ -8,14 +8,20 @@ const MapPanelSection: React.FC<{
   return (
     <div
       className='
-        bg-[url(/images/background/main-bg-white.jpg)] 
-        h-fit w-[100%] absolute top-0 z-10 px-4
-        flex flex-col '
+        flex flex-col  
+        bg-[url(/images/background/main-bg-white.jpg)]
+        md:bg-[url()]
+        md:bg-white 
+        h-fit w-[100%] md:w-[90%] 
+        absolute top-0 z-10 px-4 
+        md:px-16 md:py-10
+        md:mx-20 md:my-10 
+      '
     >
-      <span className='flex justify-end mr-1 mt-4'>
+      <span className='flex justify-end mr-1 mt-4 md:mt-0 md:mb-6'>
         <AiOutlineClose size={30} onClick={onCloseIconClick} />
       </span>
-      <div id='main' className='flex flex-col p-5'>
+      <div id='main' className='flex flex-col p-5 md:p-0'>
         {children}
       </div>
     </div>

@@ -1,6 +1,6 @@
 import Section from '../../components/Section';
 import BackButton from '../../components/BackButton';
-import ExposicaoColumns from '../../components/Expo/ColumnsExpo';
+import MainMenuButton from '../../components/MainMenuButton';
 
 import { expoMenuLinks } from '../../assets/data/imagesData';
 
@@ -8,15 +8,56 @@ const Exposicao = () => {
   return (
     <Section>
       <BackButton linkToGoBack='/' />
-      <div className='flex flex-col py-20 px-6 items-center'>
-        <ExposicaoColumns
-          imageLink1={expoMenuLinks[0]}
-          imageLink2={expoMenuLinks[1]}
-        />
-        <ExposicaoColumns
-          imageLink1={expoMenuLinks[2]}
-          imageLink2={expoMenuLinks[3]}
-        />
+      <div
+        className='
+          flex flex-col md:flex-row
+          py-20 md:py-40
+          px-6
+          items-center
+        '
+      >
+        <div
+          className='
+            flex flex-row 
+            mt-10 
+            md:ml-20 md:w-[100%]
+            md:justify-end
+          '
+        >
+          <MainMenuButton
+            imageUrl={expoMenuLinks[0].imageUrl}
+            imageTextDescription={expoMenuLinks[0].imageTextDescription}
+            link={expoMenuLinks[0].link}
+            size='40%'
+          />
+          <MainMenuButton
+            imageUrl={expoMenuLinks[1].imageUrl}
+            imageTextDescription={expoMenuLinks[1].imageTextDescription}
+            link={expoMenuLinks[1].link}
+            size='40%'
+          />
+        </div>
+        <div
+          className='
+            flex flex-row 
+            mt-10 
+            md:w-[100%]
+            md:justify-start
+          '
+        >
+          <MainMenuButton
+            imageUrl={expoMenuLinks[2].imageUrl}
+            imageTextDescription={expoMenuLinks[2].imageTextDescription}
+            link={expoMenuLinks[2].link}
+            size='40%'
+          />
+          <MainMenuButton
+            imageUrl={expoMenuLinks[3].imageUrl}
+            imageTextDescription={expoMenuLinks[3].imageTextDescription}
+            link={expoMenuLinks[3].link}
+            size='40%'
+          />
+        </div>
       </div>
     </Section>
   );

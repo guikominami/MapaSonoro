@@ -17,21 +17,30 @@ const MapPanel: React.FC<{
 
   return (
     <MapPanelSection onCloseIconClick={onCloseIconClick}>
-      <MapPanelTitle title={mapData.title} />
-      <MapPanelSubtitle subtitle={mapData.subtitle} audio={mapData.audioUrl} />
-      <Paragraph>
-        <b>Texto: </b> {mapData.author}
-      </Paragraph>
-      <Paragraph>
-        <b>Localização do conto: </b>
-        {mapData.local}
-      </Paragraph>
-      <MapPanelLocal
-        coordinates={mapData.coordinates}
-        localUrl={mapData.localUrl}
-      />
-      <img src={mapData.imageUrl} alt='' className='mb-6' />
-      <Paragraph>{parse(mapData.tale)}</Paragraph>
+      <div className='md:flex md:flex-row'>
+        <div className='md:w-[40%] md:ml-4 md:pr-12'>
+          <MapPanelTitle title={mapData.title} />
+          <MapPanelSubtitle
+            subtitle={mapData.subtitle}
+            audio={mapData.audioUrl}
+          />
+          <Paragraph>
+            <b>Texto: </b> {mapData.author}
+          </Paragraph>
+          <Paragraph>
+            <b>Localização do conto: </b>
+            {mapData.local}
+          </Paragraph>
+          <MapPanelLocal
+            coordinates={mapData.coordinates}
+            localUrl={mapData.localUrl}
+          />
+          <img src={mapData.imageUrl} alt='' className='mb-6 md:w-[100%]' />
+        </div>
+        <div className='md:w-[60%] md:px-4'>
+          <Paragraph>{parse(mapData.tale)}</Paragraph>
+        </div>
+      </div>
     </MapPanelSection>
   );
 };

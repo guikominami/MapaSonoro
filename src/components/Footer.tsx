@@ -1,6 +1,7 @@
-import Instagram from '../assets/icon/Instagram';
-import LinkedIn from '../assets/icon/LinkedIn';
 import iconTibanare from '../assets/icon/icon_tibanare.png';
+import iconInstagram from '../assets/icon/instagram.png';
+import iconLinkedin from '../assets/icon/linkedin.png';
+import SocialMediaLink from './SocialMediaLink';
 
 import { Link } from 'react-router-dom';
 
@@ -8,13 +9,24 @@ const Footer = () => {
   return (
     <div
       className='
-        h-20 md:h-25 flex flex-row items-center
-        justify-around align-middle bg-opacity-0  
+        h-20 md:h-35 
+        flex flex-row 
+        items-center
+        justify-around align-middle
+      bg-black/30 bg-opacity-10  
       '
     >
       <div className='flex'>
-        <Instagram iconWidth='40' iconHeight='40' />
-        <LinkedIn />
+        <SocialMediaLink
+          icon={iconInstagram}
+          altText='ícone Instagram'
+          url='https://www.instagram.com/grupotibanare/'
+        />
+        <SocialMediaLink
+          icon={iconLinkedin}
+          altText='ícone Linkedin'
+          url='https://www.linkedin.com/in/guilherme-kominami-0205a0ab/'
+        />
       </div>
       <div>
         <Link
