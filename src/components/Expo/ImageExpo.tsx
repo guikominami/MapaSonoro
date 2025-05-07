@@ -6,7 +6,15 @@ const ImageExpo: React.FC<{
   animate: boolean;
   imageUrl: string;
   description: string;
-}> = ({ onPreviousImage, onNextImage, animate, imageUrl, description }) => {
+  onImageClick: () => void;
+}> = ({
+  onPreviousImage,
+  onNextImage,
+  animate,
+  imageUrl,
+  description,
+  onImageClick,
+}) => {
   const movementRef = useRef('');
 
   function handleTouchMove(touch: React.TouchEvent<HTMLDivElement>) {
@@ -27,16 +35,17 @@ const ImageExpo: React.FC<{
 
   return (
     <div
-      className='p-4'
+      className='flex justify-center p-4'
       onTouchMove={(touchMoveEvent) => handleTouchMove(touchMoveEvent)}
       onTouchEnd={handleTouchEnd}
     >
       <img
-        className={`md:w-100 border-6 border-solid border-orange-400/60 transition-all duration-100 ease-in-out transform ${
+        className={`md:w-100 w-[85%] justify-center border-6 border-solid border-orange-400/60 transition-all duration-100 ease-in-out transform ${
           animate ? 'translate-x-2 opacity-0' : 'translate-x-0 opacity-100'
         }`}
         src={imageUrl}
         alt={description}
+        onClick={onImageClick}
       />
     </div>
   );

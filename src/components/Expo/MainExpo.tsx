@@ -5,6 +5,7 @@ import BackButton from '../BackButton';
 
 import ButtonExpo from '../Expo/ButtonExpo';
 import ImageExpo from '../Expo/ImageExpo';
+import ImageDetail from '../Expo/ImageDetail';
 
 import { imgDataExpo } from '../../assets/data/expoData';
 
@@ -15,6 +16,7 @@ const MainExposition: React.FC<{ imageData: imgDataExpo[] }> = ({
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const [animate, setAnimate] = useState<boolean>(false);
+  const [imageClick, setImageClick] = useState(false);
 
   const activeItem = imageData[activeIndex];
 
@@ -40,14 +42,27 @@ const MainExposition: React.FC<{ imageData: imgDataExpo[] }> = ({
     }, 500);
   }
 
+  function handleImageClick() {
+    setImageClick((state) => !state);
+  }
+
   return (
     <Section>
+      {imageClick && (
+        <ImageDetail
+          imageUrl={baseDir + activeItem.imageUrl}
+          title={activeItem.title}
+          description={activeItem.description}
+          onCloseIconClick={handleImageClick}
+        />
+      )}
+
       <BackButton linkToGoBack='/exposicao' />
       <div
         className='
           flex flex-col 
           items-center
-          pt-20
+          pt-12
         '
       >
         <ImageExpo
@@ -56,10 +71,16 @@ const MainExposition: React.FC<{ imageData: imgDataExpo[] }> = ({
           description={activeItem.description}
           onNextImage={nextImageClick}
           onPreviousImage={previousImageClick}
+          onImageClick={handleImageClick}
         />
-        <p className='text-white mt-4'>
-          Clique na imagem para saber mais detalhes.
-        </p>
+        {!activeItem.hasDetails && (
+          <p className='text-white mx-10'>{activeItem.title}</p>
+        )}
+        {activeItem.hasDetails && (
+          <p className='text-white mt-1'>
+            Clique na imagem para saber mais detalhes.
+          </p>
+        )}
         <div
           className='
             flex items-stretch 
