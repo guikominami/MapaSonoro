@@ -8,27 +8,25 @@ const MainPage = () => {
   //const baseDir = import.meta.env.BASE_URL;
 
   return (
-    <>
-      <Section>
-        <div
-          className='
+    <Section>
+      <div
+        className='
           flex flex-col md:flex-row 
           items-center justify-center align-middle
           py-8 md:py-40 mb-4
         '
-        >
-          {mainMenuLinks.map((item) => (
-            <MainMenuButton
-              link={item.link}
-              imageUrl={item.imageUrl}
-              imageTextDescription={item.imageTextDescription}
-              size='small'
-            />
-          ))}
-        </div>
-        <Footer />
-      </Section>
-    </>
+      >
+        {mainMenuLinks.map((item) => (
+          <MainMenuButton
+            link={item.link}
+            imageUrl={item.imageUrl}
+            imageTextDescription={item.imageTextDescription}
+            size='small'
+          />
+        ))}
+      </div>
+      <Footer />
+    </Section>
   );
 };
 

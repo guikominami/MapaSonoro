@@ -37,10 +37,10 @@ const Experiencias = () => {
   return (
     <section>
       <div id='map' className='relative'>
-        <div id='desktop' className='hidden md:contents'>
-          <img className='w-[120%]' src={imgMapDesktop} alt='' />
+        <div id='desktop' className='hidden md:block'>
+          <img className='w-full' src={imgMapDesktop} alt='' />
         </div>
-        <div id='mobile' className='contents md:hidden'>
+        <div id='mobile' className='block md:hidden'>
           <img src={imgMapMobile} alt='' />
         </div>
         {openPanel === 1 && (
