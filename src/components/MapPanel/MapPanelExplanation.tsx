@@ -4,7 +4,7 @@ import { mapMapExplanationData } from '../../assets/data/mapData';
 
 import MapPanelSection from './MapPanelSection';
 
-import Paragraph from '../Paragraph';
+import Paragraph from '../ui/Paragraph';
 import MapPanelTitle from './MapPanelTitle';
 
 const MapPanelExplanation: React.FC<{

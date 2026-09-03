@@ -1,5 +1,5 @@
 import ExpoSection from './ExpoSection';
-import Paragraph from '../Paragraph';
+import Paragraph from '../ui/Paragraph';
 
 const ImageDetail: React.FC<{
   imageUrl: string;

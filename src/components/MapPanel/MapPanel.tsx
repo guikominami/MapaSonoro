@@ -2,7 +2,7 @@ import parse from 'html-react-parser';
 
 import { mapImageData } from '../../assets/data/mapData';
 
-import Paragraph from '../Paragraph';
+import Paragraph from '../ui/Paragraph';
 
 import MapPanelSection from './MapPanelSection';
 import MapPanelTitle from './MapPanelTitle';

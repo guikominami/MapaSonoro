@@ -1,6 +1,6 @@
-import Section from '../../components/Section';
-import BackButton from '../../components/BackButton';
-import MainMenuButton from '../../components/MainMenuButton';
+import Section from '../../components/ui/Section';
+import BackButton from '../../components/ui/BackButton';
+import MainMenuButton from '../../components/ui/MainMenuButton';
 
 import { expoMenuLinks } from '../../assets/data/imagesData';
 

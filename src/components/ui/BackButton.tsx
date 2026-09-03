@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import iconVoltar from '../assets/imgs/icon-voltar.png';
+import iconVoltar from '../../assets/imgs/icon-voltar.png';
 
 const BackButton: React.FC<{ linkToGoBack: string }> = ({ linkToGoBack }) => {
   return (

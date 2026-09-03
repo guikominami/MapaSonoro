@@ -1,5 +1,5 @@
-import Section from '../components/Section';
-import MainMenuButton from '../components/MainMenuButton';
+import Section from '../components/ui/Section';
+import MainMenuButton from '../components/ui/MainMenuButton';
 import Footer from '../components/Footer';
 
 import { mainMenuLinks } from '../assets/data/imagesData';

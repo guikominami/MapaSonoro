@@ -1,7 +1,7 @@
 import iconTibanare from '../assets/icon/icon_tibanare.png';
 import iconInstagram from '../assets/icon/instagram.png';
 import iconLinkedin from '../assets/icon/linkedin.png';
-import SocialMediaLink from './SocialMediaLink';
+import SocialMediaLink from '../components/ui/SocialMediaLink';
 
 import { Link } from 'react-router-dom';
 

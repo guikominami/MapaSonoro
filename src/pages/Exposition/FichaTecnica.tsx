@@ -1,5 +1,5 @@
-import BackButton from '../../components/BackButton';
-import Paragraph from '../../components/Paragraph';
+import BackButton from '../../components/ui/BackButton';
+import Paragraph from '../../components/ui/Paragraph';
 
 const FichaTecnica = () => {
   return (

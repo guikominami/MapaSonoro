@@ -5,7 +5,7 @@ import { mapBuildingData } from '../../assets/data/mapData';
 import MapPanelSection from './MapPanelSection';
 import MapPanelLocal from './MapPanelLocal';
 import MapPanelTitle from './MapPanelTitle';
-import Paragraph from '../Paragraph';
+import Paragraph from '../ui/Paragraph';
 
 const MapPanelBuilding: React.FC<{
   iconId: string;

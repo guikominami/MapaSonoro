@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
-import Section from '../Section';
-import BackButton from '../BackButton';
+import Section from '../ui/Section';
+import BackButton from '../ui/BackButton';
 
 import ButtonExpo from '../Expo/ButtonExpo';
 import ImageExpo from '../Expo/ImageExpo';
